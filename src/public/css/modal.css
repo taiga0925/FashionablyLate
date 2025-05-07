@@ -1,0 +1,97 @@
+.buttons {
+    display: flex;
+    margin-top: 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.export {
+        height: 45px;
+        padding: 5px 30px;
+        text-align: center;
+        color: #8c7a6b;
+        background-color: #edeae6;
+        border: none;
+}
+
+.detail {
+    height: 45px;
+        padding: 5px 30px;
+        text-align: center;
+        color: #d9c6b5;
+        background-color: #fff;
+        border:solid 1px #d9c6b5;
+}
+
+.table-heading {
+    height: 80px;
+    background-color: #8c7a6b;
+    color: #fff;
+}
+
+.contacts__table {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: #8c7a6b;
+}
+
+.table-inner {
+    height: 80px;
+    border: solid 1px #edeae6;
+
+}
+
+.modal-inner__button {
+    height: 40px;
+}
+
+.modal-inner {
+    height: 80px;
+}
+
+.modal-close {
+    border: solid 1px #8c7a6b;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    text-align: center;
+    margin: 30px 0px 30px 450px;
+    background-color: #fff;
+    color: #8c7a6b;
+    font-size: 20px;
+}
+
+.modal__content {
+    position: absolute;
+    top: 12%;
+    right: 20%;
+    height: 900px;
+    width: 900px;
+    font-family: "Noto Serif JP", serif;
+    color: #8c7a6b;
+    border: solid 1px #2f3859;
+    box-shadow: 3px 3px 3px #e4e0dc;
+    background-color: #fff;
+}
+
+.modal-ttl {
+    margin: 0 60px;
+    padding-left: 100px;
+    text-align: left;
+}
+
+.modal-data {
+    padding-left: 60px;
+    text-align: left;
+}
+
+.delete-btn {
+    margin-left: 40px;
+    padding: 10px 22px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #ba370d;
+    border: none;
+}

@@ -1,0 +1,134 @@
+.header-nav__button {
+    margin-left: 140px;
+    padding: 5px 15px;
+    font-size: 16px;
+    border: solid 1px #e3d8cd;
+    background-color: #f4f4f4;
+}
+
+svg.w-5.h-5 {
+    /*paginateメソッドの矢印の大きさ調整のために追加*/
+    width: 30px;
+    height: 30px;
+}
+
+.content {
+    margin: 0 auto;
+    padding: 2% 10%;
+    max-width: 1500px;
+}
+
+
+.content-title {
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: "Noto Serif JP", serif;
+    color: #8c7a6b;
+}
+
+.content-search {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-form__item {
+    display: flex;
+    justify-content: space-between;
+    line-height: 40px;
+}
+
+.search-form__item-input {
+    margin-right: 40px;
+    width: 350px;
+    border: none;
+    border: solid 1px #e3d8cd;
+    font-size: 16px;
+    color: #8c7a6b;
+}
+
+.search-select {
+    margin-right: 40px;
+    position: relative;
+}
+
+.search-select::after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        border-right: 8px solid transparent;
+        border-left: 8px solid transparent;
+        border-top: 15px solid #e0dfde;
+        border-bottom: 0;
+        pointer-events: none;
+}
+
+.search-form__item-select {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 45px;
+    padding: 0 15px;
+    border: none;
+    border: solid 1px #e3d8cd;
+    font-size: 16px;
+    color: #8c7a6b;
+    background-color: #f4f4f4;
+}
+
+.search-form__item-calendar input {
+    margin-right: 40px;
+    height: 45px;
+    border: none;
+    border: solid 1px #e3d8cd;
+    font-size: 16px;
+    color: #8c7a6b;
+    background-color: #f4f4f4;
+}
+
+input[type="date"] {
+    position: relative;
+    padding: 0 15px;
+}
+
+input[type="date"]:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-top: 15px solid #e0dfde;
+    border-bottom: 0;
+    pointer-events: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    color: transparent;
+    background: transparent;
+    z-index: 100;
+}
+
+.search-form__button-submit {
+    height: 45px;
+    padding: 5px 30px;
+    text-align: center;
+    color: #fff;
+    background-color: #8c7a6b;
+    border: none;
+}
+
+.form__button-submit {
+    height: 45px;
+    padding: 5px 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #d9c6b5;
+    border: none;
+}
