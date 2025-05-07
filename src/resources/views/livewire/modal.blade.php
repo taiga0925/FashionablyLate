@@ -35,9 +35,9 @@
                                     <th class="modal-ttl">お名前</th>
                                     <td class="modal-data">
                                         
-                                        {{ $contact['last_name'] }}
+                                        {{ $contact['first_name'] }}
                                         <span class="space"></span>
-                                        <span class="firstName">{{ $contact['first_name'] }}</span>
+                                        <span class="lastName">{{ $contact['last_name'] }}</span>
                                     </td>
                                 </tr>
                                 <tr class="modal-inner">
@@ -99,9 +99,9 @@
             @foreach($contacts as $contact)
             <tr class="table-inner">
                 <td class="name">
-                    {{ $contact['last_name'] }}
+                    {{ $contact['first_name'] }}
                     <span class="space"></span>
-                    <span class="first">{{ $contact['first_name'] }}</span>
+                    <span class="first">{{ $contact['last_name'] }}</span>
                 </td>
                 <td class="gender">
                     <input type="hidden" value="{{ $contact['gender'] }}" />
