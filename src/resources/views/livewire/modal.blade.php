@@ -1,6 +1,5 @@
-
-
-<div>
+<form class="admin-form" action="/admin/export" method="get">
+@csrf
     <div class="buttons">
         <div class="export-btn">
             <button class="export">エクスポート</button>
@@ -130,4 +129,4 @@
             </tr>
         </table>
     </div>
-</div>
+</form>

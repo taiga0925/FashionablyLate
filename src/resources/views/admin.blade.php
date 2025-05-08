@@ -61,9 +61,7 @@
                 <button class="form__button-submit" type="submit">リセット</button>
         </form>
     </div>
-
-    <form class="admin-form" action="/admin/export" method="post">
-    @csrf
+    
             @livewire('modal')
-    </form>
+
 @endsection

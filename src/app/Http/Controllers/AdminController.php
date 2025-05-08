@@ -36,52 +36,29 @@ class AdminController extends Controller
 
     public function export(Request $request)
     {
-        $contacts = Contact::query();
-        
-        $headers = [
+        $contacts = Contact::all();
+
+        $csvHeader = [
         'ID', 'Category_ID', 'first_name', 'last_name', 'gender', 'email', 'tel', 'address', 'building', 'detail'
         ];
 
-        $headers = array_map(function ($header) {
-            return mb_convert_encoding($header, 'SJIS-win', 'UTF-8');
-        }, $headers);
+        $csvData = $contacts->toArray();
 
-        $callback = function() use ($contacts, $headers) {
+        $response = new StreamedResponse(function () use ($csvHeader, $csvData) {
             $handle = fopen('php://output', 'w');
-            fputcsv($handle, $headers);
+            fputcsv($handle, $csvHeader);
 
-            // データを一行ずつ書き込む
-            foreach ($query->cursor() as $row) {
-                $csvData = [
-                    $row->ID,
-                    $row->Category_ID,
-                    $row->first_name,
-                    $row->last_name,
-                    $row->gender,
-                    $row->email,
-                    $row->tel,
-                    $row->address,
-                    $row->building,
-                    $row->detail,
-                ];
-
-                // 各行のデータをShift-JISに変換して出力
-                $csvData = array_map(function ($field) {
-                    $normalizedField = Normalizer::normalize($field, Normalizer::FORM_C);
-                    return mb_convert_encoding($normalizedField, 'SJIS-win', 'auto');
-                }, $csvData);
-
-                fputcsv($handle, $csvData);
+            foreach ($csvData as $row) {
+                fputcsv($handle, $row);
             }
+
             fclose($handle);
-        };
-
-         $fileName = 'contact' . date('Ymd') . '.csv';
-
-        return new StreamedResponse($callback, 200, [
+        }, 200, [
             'Content-Type' => 'text/csv',
-            'Content-Disposition' => "attachment; filename=\"$fileName\"",
+            'Content-Disposition' => 'attachment; filename="contacts.csv"',
         ]);
+
+        return $response;
     }
 
     public function delete(Request $request)

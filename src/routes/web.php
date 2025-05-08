@@ -33,6 +33,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/thanks', [ContentController::class, 'store']);
     Route::get('/admin', [AdminController::class, 'admin']);
     Route::get('/admin/search', [AdminController::class, 'search']);
-    Route::post('/admin/export', [AdminController::class, 'export']);
+    Route::get('/admin/export', [AdminController::class, 'export']);
     Route::delete('/delete', [AdminController::class, 'delete']);
 });
